@@ -6,8 +6,8 @@
  * @author Lonk#6942
  * @authorId 557388558017495046
  * @authorLink https://github.com/Lonk12/
- * @source https://github.com/Lonk12/BetterDiscordPlugins/blob/main/MemeSounds/MemeSounds.plugin.js
- * @updateUrl https://raw.githubusercontent.com/Lonk12/BetterDiscordPlugins/main/MemeSounds/MemeSounds.plugin.js
+ * @source https://github.com/Vaczilek/BetterDiscordPlugins/blob/main/MemeSounds/MemeSounds.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/Vaczilek/BetterDiscordPlugins/main/MemeSounds/MemeSounds.plugin.js
  */
 
 module.exports = (() => {
@@ -68,7 +68,7 @@ module.exports = (() => {
 								queue.set(match.index, sound);
 						}
 						for (let sound of [...queue.entries()].sort((a, b) => a[0] - b[0])) {
-							let audio = new Audio("https://github.com/Lonk12/BetterDiscordPlugins/raw/main/MemeSounds/Sounds/"+sound[1].file);
+							let audio = new Audio("https://github.com/Vaczilek/BetterDiscordPlugins/tree/main/MemeSounds/Sounds/"+sound[1].file);
 							audio.volume = this.settings.setting.volume;
 							audio.play();
 							await new Promise(r => setTimeout(r, sound[1].duration+this.settings.setting.delay));
